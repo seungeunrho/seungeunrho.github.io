@@ -5,7 +5,7 @@ a {
 
 .profile-photo {
     width: 80%;
-    border-radius: 50%;
+    border-radius: 20%;
     margin-top: 15px;
     max-width: 220px;
 }
