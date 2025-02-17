@@ -63,31 +63,31 @@
                         </br>Georgia Institute of Technology
                     </li>
                     <li>
-                        <a href="http://bmild.github.io/">
+                        <a href="https://lauramsmith.github.io/">
                             Laura Smith
                         </a>
-                        </br>Google
+                        </br>UC Berkeley
                     </li>
                     <li>
-                        <a href="https://scholar.harvard.edu/dorverbin/home">
+                        <a href="https://easypapersniper.github.io/">
                           Tianyu Li
                         </a>
                         </br>Georgia Institute of Technology
                     </li><br>
                     <li>
-                        <a href="https://pratulsrinivasan.github.io/">
+                        <a href="https://people.eecs.berkeley.edu/~svlevine/">
                           Sergey Levine
                         </a>
-                        </br>Google
+                        </br>UC Berkeley
                     </li>
                     <li>
-                        <a href="https://phogzone.com/">
+                        <a href="https://xbpeng.github.io/">
                           Xue Bin Peng
                         </a>
-                        </br>Google
+                        </br>Simon Fraser University
                     </li>
                     <li>
-                        <a href="https://phogzone.com/">
+                        <a href="https://faculty.cc.gatech.edu/~sha9/">
                           Sehoon Ha
                         </a>
                         </br>Georgia Institute of Technology
@@ -101,37 +101,37 @@
                 <div class="col-md-6 col-md-offset-3 text-center">
                     <ul class="nav nav-pills nav-justified">
                         <li>
-                            <a href="https://arxiv.org/abs/2111.12077">
+                            <a href="https://arxiv.org/abs/2406.06615">
                             <image src="img/360_paper_image.jpg" height="60px">
                                 <h4><strong>Paper</strong></h4>
                             </a>
                         </li>
-                        <li>
-                            <a href="https://youtu.be/zBSH-k9GbV4">
-                            <image src="img/youtube_icon.png" height="60px">
-                                <h4><strong>Video</strong></h4>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="http://storage.googleapis.com/gresearch/refraw360/360_v2.zip" target="popup" onclick="window.open('http://storage.googleapis.com/gresearch/refraw360/360_v2.zip','popup','width=600,height=400')">
-                            <image src="img/database_icon.png" height="60px">
-                                <h4><strong>Dataset Pt. 1</strong></h4>
-                            </a>							
-                        </li>
-                        <li>
-                            <a href="https://storage.googleapis.com/gresearch/refraw360/360_extra_scenes.zip
-" target="popup" onclick="window.open('https://storage.googleapis.com/gresearch/refraw360/360_extra_scenes.zip
-','popup','width=600,height=400')">
-                            <image src="img/database_icon.png" height="60px">
-                                <h4><strong>Dataset Pt. 2</strong></h4>
-                            </a>							
-                        </li>
-                        <li>
-                            <a href="https://github.com/google-research/multinerf">
-                            <image src="img/github.png" height="60px">
-                                <h4><strong>Code</strong></h4>
-                            </a>
-                        </li>
+<!--                        <li>-->
+<!--                            <a href="https://youtu.be/zBSH-k9GbV4">-->
+<!--                            <image src="img/youtube_icon.png" height="60px">-->
+<!--                                <h4><strong>Video</strong></h4>-->
+<!--                            </a>-->
+<!--                        </li>-->
+<!--                        <li>-->
+<!--                            <a href="http://storage.googleapis.com/gresearch/refraw360/360_v2.zip" target="popup" onclick="window.open('http://storage.googleapis.com/gresearch/refraw360/360_v2.zip','popup','width=600,height=400')">-->
+<!--                            <image src="img/database_icon.png" height="60px">-->
+<!--                                <h4><strong>Dataset Pt. 1</strong></h4>-->
+<!--                            </a>							-->
+<!--                        </li>-->
+<!--                        <li>-->
+<!--                            <a href="https://storage.googleapis.com/gresearch/refraw360/360_extra_scenes.zip-->
+<!--" target="popup" onclick="window.open('https://storage.googleapis.com/gresearch/refraw360/360_extra_scenes.zip-->
+<!--','popup','width=600,height=400')">-->
+<!--                            <image src="img/database_icon.png" height="60px">-->
+<!--                                <h4><strong>Dataset Pt. 2</strong></h4>-->
+<!--                            </a>							-->
+<!--                        </li>-->
+<!--                        <li>-->
+<!--                            <a href="https://github.com/google-research/multinerf">-->
+<!--                            <image src="img/github.png" height="60px">-->
+<!--                                <h4><strong>Code</strong></h4>-->
+<!--                            </a>-->
+<!--                        </li>-->
                     </ul>
                 </div>
         </div>
@@ -141,12 +141,12 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <video id="v0" width="100%" autoplay loop muted controls>
-                  <source src="img/gardenvase_720.mp4" type="video/mp4" />
+                  <source src="img/LGSD_vid.mp4" type="video/mp4" />
                 </video>
 						</div>
             <div class="col-md-8 col-md-offset-2">
 							<p class="text-center">
-							Rendered images and depths from our model.
+							Learned skills from our approach.
 							</p>
 						</div>
         </div>
@@ -158,25 +158,25 @@
                     Abstract
                 </h3>
                 <p class="text-justify">
-Though neural radiance fields (NeRF) have demonstrated impressive view synthesis results on objects and small bounded regions of space, they struggle on "unbounded" scenes, where the camera may point in any direction and content may exist at any distance. In this setting, existing NeRF-like models often produce blurry or low-resolution renderings (due to the unbalanced detail and scale of nearby and distant objects), are slow to train, and may exhibit artifacts due to the inherent ambiguity of the task of reconstructing a large scene from a small set of images. We present an extension of mip-NeRF (a NeRF variant that addresses sampling and aliasing) that uses a non-linear scene parameterization, online distillation, and a novel distortion-based regularizer to overcome the challenges presented by unbounded scenes. Our model, which we dub "mip-NeRF 360" as we target scenes in which the camera rotates 360 degrees around a point, reduces mean-squared error by 54% compared to mip-NeRF, and is able to produce realistic synthesized views and detailed depth maps for highly intricate, unbounded real-world scenes.
+Skill discovery methods enable agents to learn diverse emergent behaviors without explicit rewards. To make learned skills useful for unknown downstream tasks, obtaining a semantically diverse repertoire of skills is essential. While some approaches introduce a discriminator to distinguish skills and others aim to increase state coverage, no existing work directly addresses the "semantic diversity" of skills. We hypothesize that leveraging the semantic knowledge of large language models (LLMs) can lead us to improve semantic diversity of resulting behaviors. In this sense, we introduce Language Guided Skill Discovery (LGSD), a skill discovery framework that aims to directly maximize the semantic diversity between skills. LGSD takes user prompts as input and outputs a set of semantically distinctive skills. The prompts serve as a means to constrain the search space into a semantically desired subspace, and the generated LLM outputs guide the agent to visit semantically diverse states within the subspace. We demonstrate that LGSD enables legged robots to visit different user-intended areas on a plane by simply changing the prompt. Furthermore, we show that language guidance aids in discovering more diverse skills compared to five existing skill discovery methods in robot-arm manipulation environments. Lastly, LGSD provides a simple way of utilizing learned skills via natural language.
                 </p>
             </div>
         </div>
 
 
 
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                <h3>
-                    Video
-                </h3>
-                <div class="text-center">
-                    <div style="position:relative;padding-top:56.25%;">
-                        <iframe src="https://youtube.com/embed/zBSH-k9GbV4" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
-                    </div>
-                </div>
-            </div>
-        </div>
+<!--        <div class="row">-->
+<!--            <div class="col-md-8 col-md-offset-2">-->
+<!--                <h3>-->
+<!--                    Video-->
+<!--                </h3>-->
+<!--                <div class="text-center">-->
+<!--                    <div style="position:relative;padding-top:56.25%;">-->
+<!--                        <iframe src="https://youtube.com/embed/zBSH-k9GbV4" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
 
             
         <div class="row">
@@ -186,13 +186,13 @@ Though neural radiance fields (NeRF) have demonstrated impressive view synthesis
                 </h3>
                 <div class="form-group col-md-10 col-md-offset-1">
                     <textarea id="bibtex" class="form-control" readonly>
-@article{barron2022mipnerf360,
-    title={Mip-NeRF 360: Unbounded Anti-Aliased Neural Radiance Fields},
-    author={Jonathan T. Barron and Ben Mildenhall and 
-            Dor Verbin and Pratul P. Srinivasan and Peter Hedman},
-    journal={CVPR},
-    year={2022}
-}</textarea>
+@article{rho2024language,
+  title={Language Guided Skill Discovery},
+  author={Rho, Seungeun and Smith, Laura and Li, Tianyu and Levine, Sergey and Peng, Xue Bin and Ha, Sehoon},
+  journal={arXiv preprint arXiv:2406.06615},
+  year={2024}
+}
+</textarea>
                 </div>
             </div>
         </div>
