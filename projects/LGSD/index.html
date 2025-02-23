@@ -52,6 +52,7 @@
                 <small>
 								ICLR 2025
                 </small>
+                </br>
             </h2>
         </div>
         <div class="row">
@@ -139,18 +140,7 @@
 
 
 
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                <video id="v0" width="100%" autoplay loop muted controls>
-                  <source src="img/LGSD_vid.mp4" type="video/mp4" />
-                </video>
-						</div>
-            <div class="col-md-8 col-md-offset-2">
-							<p class="text-center">
-							Learned skills from our approach.
-							</p>
-						</div>
-        </div>
+
 
 
         <div class="row">
@@ -162,6 +152,48 @@
 Skill discovery methods enable agents to learn diverse emergent behaviors without explicit rewards. To make learned skills useful for unknown downstream tasks, obtaining a semantically diverse repertoire of skills is essential. While some approaches introduce a discriminator to distinguish skills and others aim to increase state coverage, no existing work directly addresses the "semantic diversity" of skills. We hypothesize that leveraging the semantic knowledge of large language models (LLMs) can lead us to improve semantic diversity of resulting behaviors. In this sense, we introduce Language Guided Skill Discovery (LGSD), a skill discovery framework that aims to directly maximize the semantic diversity between skills. LGSD takes user prompts as input and outputs a set of semantically distinctive skills. The prompts serve as a means to constrain the search space into a semantically desired subspace, and the generated LLM outputs guide the agent to visit semantically diverse states within the subspace. We demonstrate that LGSD enables legged robots to visit different user-intended areas on a plane by simply changing the prompt. Furthermore, we show that language guidance aids in discovering more diverse skills compared to five existing skill discovery methods in robot-arm manipulation environments. Lastly, LGSD provides a simple way of utilizing learned skills via natural language.
                 </p>
             </div>
+        </div>
+
+        <div class="row">
+
+            <p class="text-center">
+            Franka
+            </p>
+
+        </div>
+
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <video id="v1" width="100%" autoplay loop muted controls>
+                  <source src="img/LGSD_Franka_quadrant.mp4" type="video/mp4" />
+                </video>
+						</div>
+            <div class="col-md-8 col-md-offset-2">
+							<p class="text-center">
+							Learned skills from our approach.
+							</p>
+						</div>
+        </div>
+
+        <div class="row">
+
+            <p class="text-center">
+            Ant
+            </p>
+
+        </div>
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <video id="v2" width="100%" autoplay loop muted controls>
+                  <source src="img/LGSD_Ant.mp4" type="video/mp4" />
+                </video>
+						</div>
+            <div class="col-md-8 col-md-offset-2">
+							<p class="text-center">
+							Learned skills from our approach.
+							</p>
+						</div>
         </div>
 
 
