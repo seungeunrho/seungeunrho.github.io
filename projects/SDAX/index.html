@@ -97,46 +97,23 @@
 						<hr>
 
 
-						<h3 style="color: #1f4e8b;">Goal</h3>
+						<h3 style="color: #1f4e8b;">Motivation</h3>
+						
 						<p style="color: black;">
-							Our aim is to develop learning framework that can train agile locomotion skills with:
-							<br> &nbsp;&nbsp;&nbsp;&nbsp; (1) No excessive <b color: black;>reward engineering</b>
-							<br> &nbsp;&nbsp;&nbsp;&nbsp; (2) No <b color: black;>curriculum learning </b>
-							<br> &nbsp;&nbsp;&nbsp;&nbsp; (3) No <b color: black;>reference trajectories </b>
-							<br> We just leverage unsupervsied skill discovery to autonmusly discover skills that can solve the task.
-						</p>
-								
-						<hr>
-						<h3 style="color: #1f4e8b;">Abstract</h3>
-						<p style="color: black;">Exploration is crucial for legged robots to learn agile locomotion behaviors capable of overcoming diverse obstacles. 
-							For example, a robot may need to try different contact patterns and momentum profiles to successfully jump over an obstacle—but encouraging such diverse exploration is inherently challenging. As a result, training these behaviors often relies on additional techniques such as extensive reward engineering, expert demonstrations, or curriculum learning. However, these approaches limit generalizability, especially when prior knowledge or demonstration data is unavailable.
-							In this work, we propose using unsupervised skill discovery as a skill-level exploration strategy to significantly reduce human engineering effort. Our learning framework enables the agent to autonomously discover diverse skills to overcome complex obstacles. To dynamically regulate the degree of exploration throughout training, we introduce a bi-level optimization process that learns a parameter to balance two distinct reward signals. We demonstrate that our method enables quadrupedal robots to acquire highly agile behaviors—including crawling, climbing, leaping, and complex maneuvers such as jumping off vertical walls. Finally, we successfully deploy the learned policy on real hardware, validating its transferability to the real world.
-						</p>
-		
-						<hr>
-						<h3 style="color: #1f4e8b;">Paper and Code</h3>
-						<p style="margin-bottom: 0em;">
-							Latest version: <a href="Unsupervised_Skill_Discovery_as_Exploration_for_Learning_Agile_Locomotion_compressed.pdf">here</a> | 
-							Code: <a href="https://github.com/sdax-locomotion/skill-discovery">GitHub</a>
-							<br>Conference on Robot Learning (CoRL) 2025<br>
-						</p>
-						<div class="12u$"><a href="Unsupervised_Skill_Discovery_as_Exploration_for_Learning_Agile_Locomotion_compressed.pdf"><span class="image fit" style="border: 1px solid; border-color: #888888;"><img src="images/Unsupervised_Skill_Discovery_as_Exploration_for_Learning_Agile_Locomotion_compressed_thumbnail.png" alt="" /></span></a></div>
+							<p style="color: black;"><b style="color: #8B7000;">How can we enable robots to discover and learn agile locomotion skills without manual reward engineering?</b>
 
+							<br> &nbsp;&nbsp;&nbsp;&nbsp; (1) No excessive <b style="color: black;">reward engineering</b>
+							<br> &nbsp;&nbsp;&nbsp;&nbsp; (2) No <b style="color: black;">curriculum learning </b>
+							<br> &nbsp;&nbsp;&nbsp;&nbsp; (3) No <b style="color: black;">reference trajectories </b>
+							<br> We just leverage <b style="color: #8B7000;">unsupervsied skill discovery</b> to autonmusly discover skills that can solve the task.
+						</p>
 
 						
+								
 						<hr>
-				
-						<h3 style="color: #1f4e8b;">BibTeX</h3>
-						<pre><code>@inproceedings{rho2025sdax,
-	title={Unsupervised Skill Discovery as Exploration for Learning Agile Locomotion},
-	author={Rho, Seungeun and Garg, Kartik and Byrd, Morgan and Ha, Sehoon},
-	booktitle={9th Annual Conference on Robot Learning},
-	year={2025}
-}</code></pre>
-					
-						<hr>
+
 						<h3 style="color: #1f4e8b;">Method Overview</h3>
-						<p style="color: black;"><b style="color: #8B7000;">How can we enable robots to discover and learn agile locomotion skills without manual reward engineering?</b>
+						
 						<br><br>
 						Our approach combines <b style="color: #8B7000;">reinforcement learning with unsupervised skill discovery</b> using a novel bi-level optimization framework. Instead of requiring complex reward engineering, the method automatically balances exploration and task completion.
 						</p>
@@ -180,6 +157,30 @@
 						<br><br>
 						This ensures λ increases when diversity helps task performance and decreases when it hinders progress.
 						</p>
+						
+		
+						<hr>
+						<h3 style="color: #1f4e8b;">Paper and Code</h3>
+						<p style="margin-bottom: 0em;">
+							Latest version: <a href="Unsupervised_Skill_Discovery_as_Exploration_for_Learning_Agile_Locomotion_compressed.pdf">here</a> | 
+							Code: <a href="https://github.com/sdax-locomotion/skill-discovery">GitHub</a>
+							<br>Conference on Robot Learning (CoRL) 2025<br>
+						</p>
+						<div class="12u$"><a href="Unsupervised_Skill_Discovery_as_Exploration_for_Learning_Agile_Locomotion_compressed.pdf"><span class="image fit" style="border: 1px solid; border-color: #888888;"><img src="images/Unsupervised_Skill_Discovery_as_Exploration_for_Learning_Agile_Locomotion_compressed_thumbnail.png" alt="" /></span></a></div>
+
+
+						
+						<hr>
+				
+						<h3 style="color: #1f4e8b;">BibTeX</h3>
+						<pre><code>@inproceedings{rho2025sdax,
+	title={Unsupervised Skill Discovery as Exploration for Learning Agile Locomotion},
+	author={Rho, Seungeun and Garg, Kartik and Byrd, Morgan and Ha, Sehoon},
+	booktitle={9th Annual Conference on Robot Learning},
+	year={2025}
+}</code></pre>
+					
+
 						
 
 						<hr>
