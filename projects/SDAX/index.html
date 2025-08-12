@@ -100,12 +100,16 @@
 						<h3 style="color: #1f4e8b;">Motivation</h3>
 						
 						<p style="color: black;">
-							<p style="color: black;"><b style="color: #8B7000;">How can we enable robots to discover and learn agile locomotion skills without manual reward engineering?</b>
+							<p style="color: black;"><b style="color: #8B7000;">How can we enable robots to learn agile locomotion skills without manual engineering efforts?</b>
 
 							<br> &nbsp;&nbsp;&nbsp;&nbsp; (1) No excessive <b style="color: black;">reward engineering</b>
 							<br> &nbsp;&nbsp;&nbsp;&nbsp; (2) No <b style="color: black;">curriculum learning </b>
 							<br> &nbsp;&nbsp;&nbsp;&nbsp; (3) No <b style="color: black;">reference trajectories </b>
-							<br> We just leverage <b style="color: #8B7000;">unsupervsied skill discovery</b> to autonmusly discover skills that can solve the task.
+							
+						</p>
+
+						<p style="color: black;"">
+						We leverage <b style="color: #8B7000;">unsupervised skill discovery</b> for high level exploration to discover skills, and apply bi-level optimization to automatically balance exploration and task completion.
 						</p>
 
 						
@@ -115,10 +119,7 @@
 						<h3 style="color: #1f4e8b;">Method Overview</h3>
 						
 						<br><br>
-						Our approach combines <b style="color: #8B7000;">reinforcement learning with unsupervised skill discovery</b> using a novel bi-level optimization framework. Instead of requiring complex reward engineering, the method automatically balances exploration and task completion.
-						</p>
 						
-						<h4 style="color: #1f4e8b;">Core Algorithm</h4>
 						<p style="color: black;">We train a <b style="color: #8B7000;">skill-conditioned policy π(a|s,z)</b> that optimizes both task completion and skill diversity. The policy is parameterized by neural network weights <b style="color: #8B7000;">θ</b>, which we optimize using:
 						<br>
 						<code>θ = argmaxJ<sup>task+div</sup> = argmaxE<sub>π<sub>θ</sub></sub>[∑<sup>∞</sup><sub>t=0</sub> γ<sup>t</sup> (r<sup>task</sup><sub>t</sub> + λ r<sup>div</sup><sub>t</sub>)]</code>
