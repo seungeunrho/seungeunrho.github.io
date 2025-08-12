@@ -1,0 +1,311 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Unsupervised Skill Discovery as Exploration for Learning Agile Locomotion</title>
+		<meta charset="utf-8" />
+		 <meta name="viewport" content="width=1000">
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="icon" type="image/png" href="images/gt_logo2.png">
+
+		<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-LS6L6LB7RX"></script>
+		<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'G-LS6L6LB7RX');
+		</script>
+
+		<meta property="og:url"           content="https://sdax.github.io" />
+	    <meta property="og:type"          content="website" />
+	    <meta property="og:title"         content="Unsupervised Skill Discovery as Exploration for Learning Agile Locomotion" />
+	    <meta property="og:description"   content="We present a novel approach for learning agile locomotion skills through unsupervised skill discovery. Our method enables legged robots to discover and master complex locomotion behaviors, including wall-jumping and other super agile tasks, without requiring task-specific demonstrations or rewards. By treating skill discovery as an exploration process, our approach automatically learns diverse and robust locomotion policies that can adapt to challenging environments and perform dynamic maneuvers." />
+	    
+
+	</head>
+	<body id="top">
+
+
+		<!-- Main -->
+			<div id="main" style="padding-bottom:1em; padding-top: 5em; width: 60em; max-width: 70em; margin-left: auto; margin-right: auto;">
+					<section id="four">
+						<!-- <div class="box alt" style="margin-bottom: 1em;">
+							<div class="row 0% uniform" style="width: 100%; display: flex; justify-content: space-between;">
+								<!-- Stanford Logo -->
+								<!-- <div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 20%">
+									<span class="image fit" style="margin-bottom: 0.5em; margin-top: 0.3em">
+										<img src="images/stanford_logo.png" alt="">
+									</span>
+								</div> -->
+								<!-- Columbia Logo -->
+								<!-- <div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 22%">
+									<span class="image fit" style="margin-bottom: 0.5em; margin-top: 0.3em">
+										<img src="images/columbia_engineering_logo.svg" alt="">
+									</span>
+								</div> -->
+								<!-- TRI Logo -->
+								<!-- <div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 22%">
+									<span class="image fit" style="margin-bottom: 0.5em; margin-top: 0.3em">
+										<img src="images/tri_logo_landscape.svg" alt="">
+									</span>
+								</div> -->
+								<!-- MIT Logo -->
+								<!-- <div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 25%">
+									<span class="image fit" style="margin-bottom: 0.5em; margin-top: 0.3em">
+										<img src="images/mit_logo.svg" alt="">
+									</span>
+								</div> -->
+							<!-- </div>
+						</div> --> 
+
+						<h1 style="text-align: center; margin-bottom: 0; color: #1f4e8b; font-size: 225%">SDAX: Unsupervised <b style="color: #1f4e8b; font-weight: 900; text-shadow: 1px 1px 2px rgba(0,0,0,0.3); font-size: 1.1em;">S</b>kill <b style="color: #1f4e8b; font-weight: 900; text-shadow: 1px 1px 2px rgba(0,0,0,0.3); font-size: 1.1em;">D</b>iscovery <b style="color: #1f4e8b; font-weight: 900; text-shadow: 1px 1px 2px rgba(0,0,0,0.3); font-size: 1.1em;">A</b>s e<b style="color: #1f4e8b; font-weight: 900; text-shadow: 1px 1px 2px rgba(0,0,0,0.3); font-size: 1.1em;">X</b>ploration</h1>
+						<h2 style="text-align: center; white-space: nowrap; font-size: 200%">for Learning Agile Locomotion</h2>
+						
+						<div style="text-align: center; margin-top: 1em; margin-bottom: 2em;">
+							<p style="font-size: 1.3em; margin-bottom: 0.5em; color: #1f4e8b;">
+								<a href="https://scholar.google.com/citations?user=GmtZ_jYAAAAJ&hl=ko" style="color: #1f4e8b; text-decoration: none !important; border-bottom: none !important;">Seungeun Rho</a><sup>*</sup>, 
+								<a href="https://sites.google.com/view/kartik-garg/home" style="color: #1f4e8b; text-decoration: none !important; border-bottom: none !important;">Kartik Garg</a><sup>*</sup>, 
+								<a href="https://morganbyrd03.github.io/" style="color: #1f4e8b; text-decoration: none !important; border-bottom: none !important;">Morgan Byrd</a>, 
+								<a href="https://faculty.cc.gatech.edu/~sha9/" style="color: #1f4e8b; text-decoration: none !important; border-bottom: none !important;">Sehoon Ha</a>
+							</p>
+							<p style="font-size: 1.1em; color: #666; margin-bottom: 0.2em;">
+								Georgia Institute of Technology
+							</p>
+							<p style="font-size: 0.9em; color: #888; margin-top: 0;">
+								<sup>*</sup> Equal contribution
+							</p>
+						</div>
+
+						<div class="box alt" style="margin-bottom: 2em;">
+							<!-- <div style="text-align: center; margin-bottom: 1em;">
+								<h3 style="color: black; margin-bottom: 0.5em;">Agile Locomotion via Unsupervised Skill Discovery</h3>
+							</div> -->
+							<div class="row 50% uniform" style="width: 100%;">
+								<div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 100%">
+									<span class="image fit" style="margin-bottom: 0.5em;">
+										<video controls autoplay loop muted playsinline style="width: 100%; border-radius: 10px;">
+											<source src="vidoes_parkour/Unsupervised_Skill_Discovery_as_Exploration_for_Learning_Agile_Locomotion_CoRL_Submission_v5.mp4" type="video/mp4">
+										</video>
+									</span>
+								</div>
+							</div>
+						</div>
+								
+						<hr>
+						<h3 style="color: #1f4e8b;">Abstract</h3>
+						<p style="color: black;">Exploration is crucial for legged robots to learn agile locomotion behaviors capable of overcoming diverse obstacles. 
+							For example, a robot may need to try different contact patterns and momentum profiles to successfully jump over an obstacle—but encouraging such diverse exploration is inherently challenging. As a result, training these behaviors often relies on additional techniques such as extensive reward engineering, expert demonstrations, or curriculum learning. However, these approaches limit generalizability, especially when prior knowledge or demonstration data is unavailable.
+							In this work, we propose using unsupervised skill discovery as a skill-level exploration strategy to significantly reduce human engineering effort. Our learning framework enables the agent to autonomously discover diverse skills to overcome complex obstacles. To dynamically regulate the degree of exploration throughout training, we introduce a bi-level optimization process that learns a parameter to balance two distinct reward signals. We demonstrate that our method enables quadrupedal robots to acquire highly agile behaviors—including crawling, climbing, leaping, and complex maneuvers such as jumping off vertical walls. Finally, we successfully deploy the learned policy on real hardware, validating its transferability to the real world.
+						</p>
+		
+						<hr>
+						<h3 style="color: #1f4e8b;">Paper and Code</h3>
+						<p style="margin-bottom: 0em;">
+							Latest version: <a href="Unsupervised_Skill_Discovery_as_Exploration_for_Learning_Agile_Locomotion_compressed.pdf">here</a> | 
+							Code: <a href="https://github.com/sdax-locomotion/skill-discovery">GitHub</a>
+							<br>Conference on Robot Learning (CoRL) 2025<br>
+						</p>
+						<div class="12u$"><a href="Unsupervised_Skill_Discovery_as_Exploration_for_Learning_Agile_Locomotion_compressed.pdf"><span class="image fit" style="border: 1px solid; border-color: #888888;"><img src="images/Unsupervised_Skill_Discovery_as_Exploration_for_Learning_Agile_Locomotion_compressed_thumbnail.png" alt="" /></span></a></div>
+
+
+						
+						<hr>
+				
+						<h3 style="color: #1f4e8b;">BibTeX</h3>
+						<pre><code>@inproceedings{rho2025sdax,
+	title={Unsupervised Skill Discovery as Exploration for Learning Agile Locomotion},
+	author={Rho, Seungeun and Garg, Kartik and Byrd, Morgan and Ha, Sehoon},
+	booktitle={9th Annual Conference on Robot Learning},
+	year={2025}
+}</code></pre>
+					
+						<hr>
+						<h3 style="color: #1f4e8b;">Method Overview</h3>
+						<p style="color: black;"><b style="color: #8B7000;">How can we enable robots to discover and learn agile locomotion skills without manual reward engineering?</b>
+						<br><br>
+						Our approach combines <b style="color: #8B7000;">reinforcement learning with unsupervised skill discovery</b> using a novel bi-level optimization framework. Instead of requiring complex reward engineering, the method automatically balances exploration and task completion.
+						</p>
+						
+						<h4 style="color: #1f4e8b;">Core Algorithm</h4>
+						<p style="color: black;">We train a <b style="color: #8B7000;">skill-conditioned policy π(a|s,z)</b> that optimizes both task completion and skill diversity. The policy is parameterized by neural network weights <b style="color: #8B7000;">θ</b>, which we optimize using:
+						<br>
+						<code>θ = argmaxJ<sup>task+div</sup> = argmaxE<sub>π<sub>θ</sub></sub>[∑<sup>∞</sup><sub>t=0</sub> γ<sup>t</sup> (r<sup>task</sup><sub>t</sub> + λ r<sup>div</sup><sub>t</sub>)]</code>
+						<br><br>
+						
+						The key innovation is a <b style="color: #8B7000;">learnable balancing parameter λ</b> that automatically adjusts the weight between:
+						<ul style="margin-left: 1.5em; color: black;">
+							<li><b style="color: #8B7000;">Task reward (r<sub>task</sub>):</b> Simple goal-oriented signal (e.g., forward velocity)</li>
+							<li><b style="color: #8B7000;">Diversity reward (r<sub>div</sub>):</b> Encourages different skills to explore distinct behaviors</li>
+						</ul>
+						</p>
+						
+						<div class="row 50% uniform" style="width: 60%; margin-top: 1em; margin-bottom: 1em; margin-left: 10%; margin-right: 30%;">
+							<div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 100%">
+								<span class="image fit">
+									<img src="images/method.png" alt="" style="display: block; margin-left: auto; margin-right: auto;">
+								</span>
+								<p style="color: #666; font-size: 0.9em; margin-top: 0.5em; font-style: italic; text-align: center;">
+									A figure of bi-level optimization for π<sub>θ</sub> and λ. The task reward gives the gradient signal for training λ, and the sum of both sources of rewards provides the gradient signal for optimizing π<sub>θ</sub>.
+								</p>
+							</div>
+						</div>
+						
+						<h4 style="color: #1f4e8b;">Bi-Level Optimization</h4>
+						<p style="color: black;">While the policy parameters θ optimize the combined objective, λ is trained using <b style="color: #8B7000;">only the task reward</b>:
+						<br>
+						<code>λ = argmax<sub>λ</sub> J<sup>task</sup></code>
+						<br><br>
+						Since we cannot directly compute ∇<sub>λ</sub>J<sup>task</sup>, we apply the chain rule:
+						<br>
+						<code>∇<sub>λ</sub>J<sup>task</sup> = ∇<sub>θ</sub>J<sup>task</sup> ∇<sub>λ</sub>θ</code>
+						<br><br>
+						This can be expanded into our final tractable form:
+						<br>
+						<code>∇<sub>λ</sub>J<sup>task</sup> ≈ α A<sup>task</sup> ∇<sub>θ'</sub> log π<sub>θ'</sub>(a|s,z) · A<sup>div</sup> ∇<sub>θ</sub> log π<sub>θ</sub>(a|s,z)</code>
+						<br><br>
+						This ensures λ increases when diversity helps task performance and decreases when it hinders progress.
+						</p>
+						
+
+						<hr>
+						<h3 style="color: #1f4e8b;">Results</h3>
+						<p style="color: black;">
+							We evaluate our framework on challenging locomotion tasks requiring distinctive control strategies. Our method successfully learns the necessary motor skills for all tasks, outperforming task-only baselines and demonstrating that incorporating diversity rewards helps in learning agile locomotion skills. Skill discovery functions as a high-level exploration module, enabling agents to systematically probe diverse strategies and rapidly identify the contact patterns and momentum profiles needed for task completion.
+						</p>
+
+						<h4 style="color: #1f4e8b;">Crawl</h4>
+						<div class="box alt" style="margin-bottom: 1em; margin-top: 1em;">
+							<div class="row 50% uniform" style="width: 100%;">
+								<div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 50%">
+									<span class="image fit" style="margin-bottom: 0.5em;">
+										<video controls autoplay loop muted playsinline style="width: 100%; margin-right: 5%;">
+											<source src="vidoes_parkour/crawl_sim.mp4" type="video/mp4">
+										</video>
+									</span>
+									Sim
+								</div>
+								<div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 50%">
+									<span class="image fit" style="margin-bottom: 0.5em;">
+										<video controls autoplay loop muted playsinline style="width: 100%; margin-right: 5%;">
+											<source src="vidoes_parkour/crawl_real.mp4" type="video/mp4">
+										</video>
+									</span>
+									Real
+								</div>
+							</div>
+						</div>
+
+						<h4 style="color: #1f4e8b;">Leap</h4>
+						<div class="box alt" style="margin-bottom: 1em; margin-top: 1em;">
+							<div class="row 50% uniform" style="width: 100%;">
+								<div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 50%">
+									<span class="image fit" style="margin-bottom: 0.5em;">
+										<video controls autoplay loop muted playsinline style="width: 100%; margin-right: 5%;">
+											<source src="vidoes_parkour/leap_sim.mp4" type="video/mp4">
+										</video>
+									</span>
+									Sim
+								</div>
+								<div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 50%">
+									<span class="image fit" style="margin-bottom: 0.5em;">
+										<video controls autoplay loop muted playsinline style="width: 100%; margin-right: 5%;">
+											<source src="vidoes_parkour/leap_real.mp4" type="video/mp4">
+										</video>
+									</span>
+									Real
+								</div>
+							</div>
+						</div>
+
+						<h4 style="color: #1f4e8b;">Jump</h4>
+						<div class="box alt" style="margin-bottom: 1em; margin-top: 1em;">
+							<div class="row 50% uniform" style="width: 100%;">
+								<div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 50%">
+									<span class="image fit" style="margin-bottom: 0.5em;">
+										<video controls autoplay loop muted playsinline style="width: 100%; margin-right: 5%;">
+											<source src="vidoes_parkour/jump_sim.mp4" type="video/mp4">
+										</video>
+									</span>
+									Sim
+								</div>
+								<div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 50%">
+									<span class="image fit" style="margin-bottom: 0.5em;">
+										<video controls autoplay loop muted playsinline style="width: 100%; margin-right: 5%;">
+											<source src="vidoes_parkour/jump_real.mp4" type="video/mp4">
+										</video>
+									</span>
+									Real
+								</div>
+							</div>
+						</div>
+
+												<h4 style="color: #1f4e8b;">Positive Skill Collapse</h4>
+						<p style="color: black;">
+							As training progresses, a growing number of skill vectors become capable of solving the task: <b style="color: #8B7000;">Leap ~97%</b>, <b style="color: #8B7000;">Climb ~65%</b>, <b style="color: #8B7000;">Crawl ~60%</b>. This suggests that once a viable solution is discovered, different skill vectors converge into similar behaviors. This phenomenon is facilitated by task rewards: when a skill finds a successful solution, learning propagates to other skill-conditioned behaviors through the shared policy network. We term this <b style="color: #8B7000;">"positive collapse"</b> of skills, which is beneficial because it mitigates the issue of selecting the right skill.
+						</p>
+						<div class="box alt" style="margin-bottom: 1em; margin-top: 1em;">
+							<div class="row 50% uniform" style="width: 100%;">
+								<div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 100%">
+									<span class="image fit" style="margin-bottom: 0.5em;">
+										<video controls autoplay loop muted playsinline style="width: 100%; margin-right: 5%;">
+											<source src="vidoes_parkour/skill_collpse.mp4" type="video/mp4">
+										</video>
+									</span>
+									Skills converging to successful behaviors
+								</div>
+							</div>
+												</div>
+						
+						<h4 style="color: #1f4e8b;">Diverse Terrain Adaptation</h4>
+						<p style="color: black;">To evaluate the robustness of the crawling policy trained with our skill discovery approach, we deployed it on different terrains including wood and rubber mat surfaces. The robot successfully crawled under obstacles in both settings, demonstrating its ability to generalize across varying surface conditions and terrain properties.
+						</p>
+						<div class="box alt" style="margin-bottom: 1em; margin-top: 1em;">
+							<div class="row 50% uniform" style="width: 100%;">
+								<div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 100%">
+									<span class="image fit" style="margin-bottom: 0.5em;">
+										<video controls autoplay loop muted playsinline style="width: 100%; margin-right: 5%;">
+											<source src="vidoes_parkour/div_terrain.mp4" type="video/mp4">
+										</video>
+									</span>
+									Robust crawling across wood and rubber mat surfaces
+								</div>
+							</div>
+						</div>
+
+						<h4 style="color: #1f4e8b;">Wall-Jump: Learning Super Agile Tasks</h4>
+						<p style="color: black;">We pushed our method to its limits by introducing a new task named wall-jump. It requires the robot to perform a sequence of highly agile motions, including running, jumping, flipping, and landing in a specific order. Providing the guideline alone was not sufficient for the agent to successfully perform the wall-jump. Our method was able to acquire the specific orientation needed to kick off the wall by exploring diverse orientations through skill discovery, achieving successful wall-jumps with much higher task returns.
+						</p>
+						<div class="box alt" style="margin-bottom: 1em; margin-top: 1em;">
+							<div class="row 50% uniform" style="width: 100%;">
+								<div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 100%">
+									<span class="image fit" style="margin-bottom: 0.5em;">
+										<video controls autoplay loop muted playsinline style="width: 100%; margin-right: 5%;">
+											<source src="vidoes_parkour/wall_jump.mp4" type="video/mp4">
+										</video>
+									</span>
+									Super Agile Walljump Task
+								</div>
+							</div>
+						</div>
+
+						<hr>
+						<h3 style="color: #1f4e8b;">Acknowledgements</h3>
+						<p style="color: black;"></p>
+						
+						<h3 style="color: #1f4e8b;">Contact</h3>
+						<p style="color: black;">If you have any questions, please feel free to contact <a href="https://sites.google.com/view/kartik-garg/home" style="color: #1f4e8b; text-decoration: none !important; border-bottom: none !important;">Kartik Garg</a>.</p>
+						
+					</section>
+
+					
+			</div>
+
+			<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.poptrox.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+	</body>
+</html>
