@@ -111,7 +111,7 @@
 						<br>
 
 						<p style="color: black;"">
-						We leverage <b style="color: #8B7000;">unsupervised skill discovery</b> for high level exploration to discover skills, and apply bi-level optimization to automatically balance exploration and task completion.
+						We leverage <b style="color: #8B7000;">unsupervised skill discovery</b> for high level exploration to discover skills, and apply bi-level optimization to automatically balance between exploration and task completion.
 						</p>
 
 						
@@ -120,14 +120,14 @@
 
 						<h3 style="color: #1f4e8b;">Method Overview</h3>
 						
-						<br><br>
+						<br>
 						
 						<p style="color: black;">We train a <b style="color: #8B7000;">skill-conditioned policy π(a|s,z)</b> that optimizes both task completion and skill diversity. The policy is parameterized by neural network weights <b style="color: #8B7000;">θ</b>, which we optimize using:
 						<br>
 						<code>θ = argmaxJ<sup>task+div</sup> = argmaxE<sub>π<sub>θ</sub></sub>[∑<sup>∞</sup><sub>t=0</sub> γ<sup>t</sup> (r<sup>task</sup><sub>t</sub> + λ r<sup>div</sup><sub>t</sub>)]</code>
 						<br><br>
 						
-						The key innovation is a <b style="color: #8B7000;">learnable balancing parameter λ</b> that automatically adjusts the weight between:
+						The key component is the <b style="color: #8B7000;">learnable balancing parameter λ</b> that automatically adjusts the weight between:
 						<ul style="margin-left: 1.5em; color: black;">
 							<li><b style="color: #8B7000;">Task reward (r<sub>task</sub>):</b> Simple goal-oriented signal (e.g., forward velocity)</li>
 							<li><b style="color: #8B7000;">Diversity reward (r<sub>div</sub>):</b> Encourages different skills to explore distinct behaviors</li>
@@ -163,30 +163,7 @@
 						
 		
 						<hr>
-						<h3 style="color: #1f4e8b;">Paper and Code</h3>
-						<p style="margin-bottom: 0em;">
-							Latest version: <a href="Unsupervised_Skill_Discovery_as_Exploration_for_Learning_Agile_Locomotion_compressed.pdf">here</a> | 
-							Code: <a href="https://github.com/sdax-locomotion/skill-discovery">GitHub</a>
-							<br>Conference on Robot Learning (CoRL) 2025<br>
-						</p>
-						<div class="12u$"><a href="Unsupervised_Skill_Discovery_as_Exploration_for_Learning_Agile_Locomotion_compressed.pdf"><span class="image fit" style="border: 1px solid; border-color: #888888;"><img src="images/Unsupervised_Skill_Discovery_as_Exploration_for_Learning_Agile_Locomotion_compressed_thumbnail.png" alt="" /></span></a></div>
-
-
 						
-						<hr>
-				
-						<h3 style="color: #1f4e8b;">BibTeX</h3>
-						<pre><code>@inproceedings{rho2025sdax,
-	title={Unsupervised Skill Discovery as Exploration for Learning Agile Locomotion},
-	author={Rho, Seungeun and Garg, Kartik and Byrd, Morgan and Ha, Sehoon},
-	booktitle={9th Annual Conference on Robot Learning},
-	year={2025}
-}</code></pre>
-					
-
-						
-
-						<hr>
 						<h3 style="color: #1f4e8b;">Results</h3>
 						<p style="color: black;">
 							We evaluate our framework on challenging locomotion tasks requiring distinctive control strategies. Our method successfully learns the necessary motor skills for all tasks, outperforming task-only baselines and demonstrating that incorporating diversity rewards helps in learning agile locomotion skills. Skill discovery functions as a high-level exploration module, enabling agents to systematically probe diverse strategies and rapidly identify the contact patterns and momentum profiles needed for task completion.
@@ -307,6 +284,26 @@
 							</div>
 						</div>
 
+						<hr>
+
+						<h3 style="color: #1f4e8b;">Paper and Code</h3>
+						<p style="margin-bottom: 0em;">
+							Latest version: <a href="Unsupervised_Skill_Discovery_as_Exploration_for_Learning_Agile_Locomotion_compressed.pdf">here</a> | 
+							Code: <a href="https://github.com/sdax-locomotion/skill-discovery">GitHub</a>
+							<br>Conference on Robot Learning (CoRL) 2025<br>
+						</p>
+						<div class="12u$"><a href="Unsupervised_Skill_Discovery_as_Exploration_for_Learning_Agile_Locomotion_compressed.pdf"><span class="image fit" style="border: 1px solid; border-color: #888888;"><img src="images/Unsupervised_Skill_Discovery_as_Exploration_for_Learning_Agile_Locomotion_compressed_thumbnail.png" alt="" /></span></a></div>
+
+						<hr>
+				
+						<h3 style="color: #1f4e8b;">BibTeX</h3>
+						<pre><code>@inproceedings{rho2025sdax,
+							title={Unsupervised Skill Discovery as Exploration for Learning Agile Locomotion},
+							author={Rho, Seungeun and Garg, Kartik and Byrd, Morgan and Ha, Sehoon},
+							booktitle={9th Annual Conference on Robot Learning},
+							year={2025}
+						}</code></pre>
+					
 						<hr>
 						<h3 style="color: #1f4e8b;">Contact</h3>
 						<p style="color: black;">If you have any questions, please feel free to contact <a href="https://seungeunrho.github.io/" style="color: #1f4e8b; text-decoration: none !important; border-bottom: none !important;">Seungeun Rho</a>.</p>
