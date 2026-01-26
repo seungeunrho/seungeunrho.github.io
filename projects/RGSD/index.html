@@ -154,7 +154,7 @@
                 We propose <strong>Reference-Grounded Skill Discovery (RGSD)</strong>, which leverages a
                 reference motion dataset to ground the online skill discovery process onto a semantically
                 meaningful manifold. Through this reference grounding, RGSD learns diverse variations for
-                a 69-DoF humanoid character around existing motions. For example, given a single backward-walking
+                a <strong>69-DoF</strong>humanoid character around existing motions. For example, given a single backward-walking
                 motion, RGSD can discover diverse turning behaviors while walking backward, leading to improved
                 downstream task performance.
                 </p>
@@ -171,22 +171,22 @@
                     alt="RGSD vs METRA"
                     style="max-width: 80%; display: block; margin: 12px auto;"
                     />
-                <div class="col-md-8 col-md-offset-2">
-                    <ul>
-                        <li>
-                            Using contrastive learning, we train an encoder q(𝑧|s) to map each motion to a directional vector on the unit hypersphere.
-                        </li>
-                        <li>
-                            We then use the pre-trained encoder as a discriminator within DIAYN.
-                        </li>
-                        <li>
-                            When the policy conditioned on a specific motion embedding 𝑧, the DIAYN reward acts as an imitation reward.
-                        </li>
-                        <li>
-                            When the policy conditioned on a different 𝑧, the DIAYN reward encourages the discovery of novel yet relevant behaviors.
-                        </li>
-                    </ul>
-                </div>
+
+                <ul>
+                    <li>
+                        Using contrastive learning, we train an encoder q(𝑧|s) to <strong>map each motion to a directional vector</strong> on the unit hypersphere.
+                    </li>
+                    <li>
+                        We then use the pre-trained <strong>encoder as a discriminator</strong> within DIAYN.
+                    </li>
+                    <li>
+                        When the policy conditioned on a specific motion embedding 𝑧, the DIAYN reward acts as an <strong>imitation</strong> reward.
+                    </li>
+                    <li>
+                        When the policy conditioned on a different 𝑧, the DIAYN reward encourages the <strong>discovery</strong> of novel yet relevant behaviors.
+                    </li>
+                </ul>
+
             </div>
         </div>
 
@@ -205,11 +205,11 @@ Using different prompts, LGSD enables the learning of skills with predefined sem
         <div class="row">
             <div class="col-md-8 col-md-offset-2 text-center">
                 <h4 style="font-weight: bold;">
-                     1) Learned skills from RGSD
+                     1) Learned Skills from RGSD
                 </h4>
                 <video
                 id="v2"
-                style="height: auto; max-width: 80%;"
+                style="height: auto; max-width: 90%;"
                 controls
                 playsinline
                 >
@@ -219,7 +219,10 @@ Using different prompts, LGSD enables the learning of skills with predefined sem
                 <br>
                 RGSD can control the degree of diversity at test time by varying the sampling distribution of the latent variable 𝑧.
             </div>
-            
+        </div>
+
+        <div class="row">
+            <p></br></p>
         </div>
 
         <div class="row">
@@ -229,7 +232,7 @@ Using different prompts, LGSD enables the learning of skills with predefined sem
                 </h4>
                 <video
                 id="v2"
-                style="height: auto; max-width: 80%;"
+                style="height: auto; max-width: 90%;"
                 controls
                 playsinline
                 >
@@ -247,13 +250,17 @@ Using different prompts, LGSD enables the learning of skills with predefined sem
         </div>
 
         <div class="row">
+            <p></br></p>
+        </div>
+
+        <div class="row">
             <div class="col-md-8 col-md-offset-2 text-center">
                 <h4 style="font-weight: bold;">
                     3) Unconstrained motion generation
                 </h4>
                 <video
                 id="v2"
-                style="height: auto; max-width: 80%;"
+                style="height: auto; max-width: 90%;"
                 controls
                 playsinline
                 >
@@ -268,13 +275,17 @@ Using different prompts, LGSD enables the learning of skills with predefined sem
         </div>
 
         <div class="row">
+            <p></br></p>
+        </div>
+
+        <div class="row">
             <div class="col-md-8 col-md-offset-2 text-center">
                 <h4 style="font-weight: bold;">
                     4) Downstream task evaluation with learned skills
                 </h4>
                 <video
                 id="v2"
-                style="height: auto; max-width: 80%;"
+                style="height: auto; max-width: 90%;"
                 controls
                 playsinline
                 >
