@@ -149,12 +149,14 @@
                     style="max-width: 60%; display: block; margin: 12px auto;"
                     />
                 <p class="text-justify">
-                Existing unsupervised skill discovery methods fail to scale to high-DoF agents.
-                We propose <strong>Reference Grounded Skill Discovery (RGSD)</strong>, which leverages a
-                reference motion dataset to ground the online skill discovery process. Through this
-                reference grounding, RGSD learns diverse variations around existing motions. For example,
-                given a single backward-walking motion, it can discover diverse turning behaviors while
-                walking backward, leading to improved downstream task performance.
+                Existing unsupervised skill discovery methods struggle to scale to high-DoF agents.
+                Moreover, the learned skills are often unstructured and therefore lack semantic meaning.
+                We propose <strong>Reference-Grounded Skill Discovery (RGSD)</strong>, which leverages a
+                reference motion dataset to ground the online skill discovery process onto a semantically
+                meaningful manifold. Through this reference grounding, RGSD learns diverse variations for
+                a 69-DoF humanoid character around existing motions. For example, given a single backward-walking
+                motion, RGSD can discover diverse turning behaviors while walking backward, leading to improved
+                downstream task performance.
                 </p>
             </div>
         </div>
@@ -168,7 +170,48 @@
                 <!-- <p class="text-justify">
 Using different prompts, LGSD enables the learning of skills with predefined semantic meanings. Here are the video of learned skills.
                 </p> -->
+            </div>
+        </div>
 
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h4 style="font-weight: bold;">
+                    Learned skills
+                </h4>
+                <video
+                id="v2"
+                style="height: auto; max-width: 80%;"
+                controls
+                playsinline
+                >
+                <source src="img/controllinv_diversity.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+                </video>
+
+                <p class="text-justify">
+                hihi sdfsd
+                </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h4 style="font-weight: bold;">
+                    Learned skills
+                </h4>
+                <video
+                id="v2"
+                style="height: auto; max-width: 80%;"
+                controls
+                playsinline
+                >
+                <source src="img/unsegmented_motion.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+                </video>
+
+                <p class="text-justify">
+                hihi sdfdsf
+                </p>
             </div>
         </div>
 
@@ -184,19 +227,19 @@ Using different prompts, LGSD enables the learning of skills with predefined sem
             <p></br></p>
         </div>
 
-        <div class="row">
-        <div class="col-md-8 col-md-offset-2 text-center">
-            <video
-            id="v2"
-            style="height: auto; max-width: 80%;"
-            controls
-            playsinline
-            >
-            <source src="img/RGSD_Video.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-            </video>
-        </div>
-        </div>
+        <!-- <div class="row">
+            <div class="col-md-8 col-md-offset-2 text-center">
+                <video
+                id="v2"
+                style="height: auto; max-width: 80%;"
+                controls
+                playsinline
+                >
+                <source src="img/RGSD_Video.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+                </video>
+            </div>
+        </div> -->
 
 
 
