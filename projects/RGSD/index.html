@@ -176,7 +176,7 @@ Using different prompts, LGSD enables the learning of skills with predefined sem
         <div class="row">
             <div class="col-md-8 col-md-offset-2 text-center">
                 <h4 style="font-weight: bold;">
-                     1) Learned skills
+                     1) Learned skills from RGSD
                 </h4>
                 <video
                 id="v2"
@@ -188,8 +188,7 @@ Using different prompts, LGSD enables the learning of skills with predefined sem
                 Your browser does not support the video tag.
                 </video>
                 <br>
-                hihi sdfsd
-
+                RGSD can control the degree of diversity at test time by varying the sampling distribution of the latent variable 𝑧.
             </div>
             
         </div>
@@ -197,7 +196,7 @@ Using different prompts, LGSD enables the learning of skills with predefined sem
         <div class="row">
             <div class="col-md-8 col-md-offset-2 text-center">
                 <h4 style="font-weight: bold;">
-                    Learned skills
+                    2) When trained with unsegmented reference motions
                 </h4>
                 <video
                 id="v2"
@@ -212,7 +211,49 @@ Using different prompts, LGSD enables the learning of skills with predefined sem
                 <br>
 
 
-                hihi sdfdsf
+                RGSD is applicable to unsegmented reference motions <br>
+                (a single motion containing multiple skills)
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 text-center">
+                <h4 style="font-weight: bold;">
+                    3) Unconstrained motion generation
+                </h4>
+                <video
+                id="v2"
+                style="height: auto; max-width: 80%;"
+                controls
+                playsinline
+                >
+                <source src="img/unconstrained_generation.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+                </video>
+
+                <br>
+                Latent vectors are sampled uniformly from the unit hypersphere.
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 text-center">
+                <h4 style="font-weight: bold;">
+                    4) Downstream task evaluation with learned skills
+                </h4>
+                <video
+                id="v2"
+                style="height: auto; max-width: 80%;"
+                controls
+                playsinline
+                >
+                <source src="img/downstream.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+                </video>
+
+
 
             </div>
         </div>
