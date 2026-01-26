@@ -171,13 +171,19 @@
                     alt="RGSD vs METRA"
                     style="max-width: 60%; display: block; margin: 12px auto;"
                     />
-                <div class="col-md-6 col-md-offset-3 text-center">
-                    <ul class="nav nav-pills nav-justified">
+                <div class="col-md-6 col-md-offset-3">
+                    <ul>
                         <li>
-                            hihihi
+                            Using contrastive learning, we train an encoder \( q(z \mid s) \) to map each motion to a directional vector on the unit hypersphere.
                         </li>
                         <li>
-                            hihihi
+                            We then use the pre-trained encoder as a discriminator within DIAYN.
+                        </li>
+                        <li>
+                            When conditioned on a specific motion embedding \( z \), the DIAYN reward acts as an imitation reward.
+                        </li>
+                        <li>
+                            When conditioned on a different \( z \), the DIAYN reward encourages the discovery of novel yet relevant behaviors.
                         </li>
                     </ul>
                 </div>
