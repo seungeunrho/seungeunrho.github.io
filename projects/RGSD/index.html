@@ -141,10 +141,20 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <h3 style="font-weight: bold;">
-                    Abstract
+                    Motivation
                 </h3>
+                <img
+                    src="img/rgsd_vs_metra2.png"
+                    alt="RGSD vs METRA"
+                    style="height: 400px; max-width: 100%; display: block; margin: 12px auto;"
+                    />
                 <p class="text-justify">
-Skill discovery methods enable agents to learn diverse emergent behaviors without explicit rewards. To make learned skills useful for unknown downstream tasks, obtaining a semantically diverse repertoire of skills is essential. While some approaches introduce a discriminator to distinguish skills and others aim to increase state coverage, no existing work directly addresses the "semantic diversity" of skills. We hypothesize that leveraging the semantic knowledge of large language models (LLMs) can lead us to improve semantic diversity of resulting behaviors. In this sense, we introduce Language Guided Skill Discovery (LGSD), a skill discovery framework that aims to directly maximize the semantic diversity between skills. LGSD takes user prompts as input and outputs a set of semantically distinctive skills. The prompts serve as a means to constrain the search space into a semantically desired subspace, and the generated LLM outputs guide the agent to visit semantically diverse states within the subspace. We demonstrate that LGSD enables legged robots to visit different user-intended areas on a plane by simply changing the prompt. Furthermore, we show that language guidance aids in discovering more diverse skills compared to five existing skill discovery methods in robot-arm manipulation environments. Lastly, LGSD provides a simple way of utilizing learned skills via natural language.
+                Existing unsupervised skill discovery methods fail to scale to high-DoF agents.
+                We propose <strong>Reference Grounded Skill Discovery (RGSD)</strong>, which leverages a
+                reference motion dataset to ground the online skill discovery process. Through this
+                reference grounding, RGSD learns diverse variations around existing motions. For example,
+                given a single backward-walking motion, it can discover diverse turning behaviors while
+                walking backward, leading to improved downstream task performance.
                 </p>
             </div>
         </div>
@@ -155,12 +165,9 @@ Skill discovery methods enable agents to learn diverse emergent behaviors withou
                     Video
                 </h3>
 
-                <p class="text-justify">
+                <!-- <p class="text-justify">
 Using different prompts, LGSD enables the learning of skills with predefined semantic meanings. Here are the video of learned skills.
-                </p>
-
-
-
+                </p> -->
 
             </div>
         </div>
