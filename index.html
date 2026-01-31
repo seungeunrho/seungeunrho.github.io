@@ -28,6 +28,17 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <!-- <link rel="icon" type="image/png" href="assets/"> -->
 
+  <style>
+    .author-toggle {
+      color: #1EAEDB;
+      cursor: pointer;
+      font-style: normal;
+    }
+    .author-toggle:hover {
+      text-decoration: underline;
+    }
+  </style>
+
 <!--  &lt;!&ndash; Global site tag (gtag.js) - Google Analytics &ndash;&gt;-->
 <!--  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1J19VDQYCK"></script>-->
 <!--  <script>-->
@@ -325,7 +336,7 @@
           <!-- TITLE –––––––––––––––––––––––––––––––––––––––––––––––––– -->
           <div class="project_title">Wing strain based flight control of flapping-wing drones through reinforcement learning</div>
           <!-- AUTHORS + VENUE –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-          <br><em>Taewi Kim*, Insic Hong*, Sunghoon Im*, <strong>Seungeun Rho*</strong>, Minho Kim, Yeonwook Roh, Changhwan Kim, Jieun Park, Daseul Lim, Doohoe Lee, Seunggon Lee, Jingoo Lee, Inryeol Back, Joonho Lee, Sungchul Seo, Uikyum Kim, Junggwang Cho, Myung Rae Hong, Sanghun Kang, Young-Man Choi, Je-sung Koh, Seungyong Han, Daeshik Kang</em>
+          <br><em>Taewi Kim*, Insic Hong*, Sunghoon Im*, <strong>Seungeun Rho*</strong>, <span class="author-toggle" onclick="toggleAuthors(this)">[+19 more]</span><span class="hidden-authors" style="display: none;">Minho Kim, Yeonwook Roh, Changhwan Kim, Jieun Park, Daseul Lim, Doohoe Lee, Seunggon Lee, Jingoo Lee, Inryeol Back, Joonho Lee, Sungchul Seo, Uikyum Kim, Junggwang Cho, Myung Rae Hong, Sanghun Kang, Young-Man Choi, Je-sung Koh, Seungyong Han, Daeshik Kang</span></em>
           <br><em><span class="venue">Nature Machine Intelligence 2024</span></em>
           <!-- DESCRIPTION –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <!--        <p class="project_info">-->
@@ -418,37 +429,6 @@
         </div>
       </div>
 
-
-
-  <!--    &lt;!&ndash; PUBLICATION ENTRY –––––––––––––––––––––––––––––––––––––––––––––––––– &ndash;&gt;-->
-  <!--    <div class="row video-row">-->
-  <!--      &lt;!&ndash; MEDIA SECTION ––––ㅊ–––––––––––––––––––––––––––––––––––––––––––––– &ndash;&gt;-->
-  <!--      <div class="four columns">-->
-  <!--        <div class="video-container">-->
-  <!--          <video class="no-controls-video" autoplay loop muted preload="auto" playsinline>-->
-  <!--            <source src="assets/videos/sensor_height_adaptation.mp4" type="video/mp4">-->
-  <!--          </video>-->
-  <!--        </div>-->
-  <!--      </div>-->
-  <!--      <div class="eight columns text-column">-->
-  <!--        &lt;!&ndash; TITLE –––––––––––––––––––––––––––––––––––––––––––––––––– &ndash;&gt;-->
-  <!--        <div class="project_title">A Few Shot Adaptation of Visual Navigation Skills to New Observations using-->
-  <!--          Meta-Learning</div>-->
-  <!--        &lt;!&ndash; AUTHORS + VENUE –––––––––––––––––––––––––––––––––––––––––––––––––– &ndash;&gt;-->
-  <!--        <br><em>Qian Luo, <strong>Maks Sorokin</strong>, Sehoon Ha</em>-->
-  <!--        <br><em><span class="venue">The IEEE International Conference on Robotics and Automation (ICRA) 2021</span></em>-->
-  <!--        &lt;!&ndash; DESCRIPTION –––––––––––––––––––––––––––––––––––––––––––––––––– &ndash;&gt;-->
-  <!--        <p class="project_info">-->
-  <!--          We show how vision-based navigation agents can be trained to adapt to new sensor configurations with only-->
-  <!--          three shots of experience.-->
-  <!--          Rapid adaptation is achieved by introducing a bottleneck between perception and control networks, and through-->
-  <!--          the perception component's meta-adaptation.-->
-  <!--        </p>-->
-  <!--        &lt;!&ndash; LINKS –––––––––––––––––––––––––––––––––––––––––––––––––– &ndash;&gt;-->
-  <!--        <a href="https://arxiv.org/pdf/2011.03609.pdf">[pdf]</a>-->
-  <!--        <a href="http://arxiv.org/abs/2011.03609">[arXiv]</a>-->
-  <!--      </div>-->
-  <!--    </div>-->
       </div>
       <div class="one column hide-on-small">&nbsp;</div>
 
@@ -457,9 +437,9 @@
   <!-- Projects
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <div class="container">
+    <br>
     <div class="one column hide-on-small">&nbsp;</div>
     <div class="ten columns">
-      <br>
       <div class="div_line"></div><br>
       <h5>Projects</h5>
 
@@ -490,8 +470,6 @@
         </div>
       </div>
 
-
-
       <!-- PUBLICATION ENTRY –––––––––––––––––––––––––––––––––––––––––––––––––– -->
       <div class="row video-row">
         <!-- MEDIA SECTION –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -517,7 +495,6 @@
 
         </div>
       </div>
-
 
       <div class="row video-row">
         <!-- MEDIA SECTION
@@ -592,6 +569,17 @@
       demail.style.opacity = e_is_shown ? 0 : 1;
       e_is_shown = !e_is_shown;
     })
+
+    function toggleAuthors(element) {
+      var hiddenAuthors = element.nextElementSibling;
+      if (hiddenAuthors.style.display === 'none') {
+        hiddenAuthors.style.display = 'inline';
+        element.textContent = '[-19 more]';
+      } else {
+        hiddenAuthors.style.display = 'none';
+        element.textContent = '[+19 more]';
+      }
+    }
   </script>
 
 
