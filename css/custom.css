@@ -1,4 +1,8 @@
 /* CSS styles */
+html {
+  font-size: 14px;   /* default is usually 16px */
+}
+
 a {
     text-decoration: none;
 }
