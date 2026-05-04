@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="LineRides: Line-Guided Reinforcement Learning for Bicycle Robot Stunts">
+  <meta name="keywords" content="Bicycle Robot, Reinforcement Learning, Stunt, UMV, LineRides">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LineRides: Line-Guided Reinforcement Learning for Bicycle Robot Stunts</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+
+  <style>
+    body {
+      font-family: "Google Sans", "Noto Sans", Arial, sans-serif;
+    }
+
+    .publication-title {
+      font-family: "Google Sans", "Noto Sans", Arial, sans-serif;
+      font-size: 2.2rem;
+    }
+
+    .publication-authors {
+      margin-top: 0.4rem;
+    }
+
+    .author-block {
+      margin-right: 0.2rem;
+    }
+
+    .author-link {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .author-link:hover {
+      text-decoration: underline;
+    }
+
+    .publication-links .link-block {
+      margin: 0.3rem;
+      display: inline-block;
+    }
+
+    /* Videos */
+    .demo-video {
+      border-radius: 8px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+    }
+
+    /* Abstract section */
+    .content.has-text-justified p {
+      text-align: justify;
+    }
+
+    /* Footer */
+    .footer {
+      padding: 2rem 1.5rem;
+      background-color: #fafafa;
+    }
+
+    /* BibTeX block */
+    .bibtex-block {
+      position: relative;
+      text-align: left;
+      background: #f5f5f5;
+      border-radius: 8px;
+      padding: 1.2rem 1.2rem 1.2rem 1.2rem;
+    }
+
+    .bibtex-block pre {
+      margin: 0;
+      font-size: 0.82rem;
+      white-space: pre;
+      overflow-x: auto;
+      background: transparent;
+      padding: 0;
+    }
+
+    .copy-btn {
+      position: absolute;
+      top: 0.6rem;
+      right: 0.6rem;
+      background: #ddd;
+      border: none;
+      border-radius: 5px;
+      padding: 0.3rem 0.5rem;
+      cursor: pointer;
+      font-size: 0.85rem;
+      color: #444;
+      transition: background 0.15s;
+    }
+
+    .copy-btn:hover {
+      background: #bbb;
+    }
+
+    /* Skill cards */
+    .skill-title {
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .video-grid video {
+      width: 100%;
+      height: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+    }
+
+    .video-grid.single {
+      grid-template-columns: 1fr;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Responsive title sizing */
+    @media (max-width: 768px) {
+      .publication-title {
+        font-size: 1.4rem;
+      }
+      .video-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Hero / Title -->
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">
+            LineRides: Line-Guided Reinforcement Learning for Bicycle Robot Stunts
+          </h1>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><a class="author-link" href="https://seungeunrho.github.io/" target="_blank">Seungeun Rho</a><sup>1,2</sup>,</span>
+            <span class="author-block"><a class="author-link" href="https://scholar.google.com/citations?user=bvK2p6gAAAAJ&hl=en" target="_blank">Shamel Fahmi</a><sup>1</sup>,</span>
+            <span class="author-block"><a class="author-link" href="https://jhkim.me/" target="_blank">Jeonghwan Kim</a><sup>1,2</sup>,</span>
+            <span class="author-block"><a class="author-link" href="https://www.linkedin.com/in/arianna-ilvonen/" target="_blank">Arianna Ilvonen</a><sup>1</sup>,</span>
+            <span class="author-block"><a class="author-link" href="https://faculty.cc.gatech.edu/~sha9/" target="_blank">Sehoon Ha</a><sup>2</sup>,</span>
+            <span class="author-block"><a class="author-link" href="https://www.linkedin.com/in/gabrielnelson/" target="_blank">Gabriel Nelson</a><sup>1</sup></span>
+          </div>
+
+          <div class="is-size-6 publication-authors" style="margin-top:0.5rem;">
+            <span class="author-block"><sup>1</sup>RAI Institute, Cambridge, MA, USA</span>
+            &nbsp;&nbsp;
+            <span class="author-block"><sup>2</sup>Georgia Institute of Technology, Atlanta, GA, USA</span>
+          </div>
+
+          <div class="is-size-5" style="margin-top:0.6rem; color:#666; font-weight:500;">
+            IEEE RA-L 2026
+          </div>
+
+          <!-- Links -->
+          <div class="column has-text-centered" style="margin-top:1rem;">
+            <div class="publication-links">
+              <!-- arXiv -->
+              <span class="link-block">
+                <a href="#"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Code -->
+              <span class="link-block">
+                <a href="#"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code (Coming Soon)</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Teaser Video -->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video class="demo-video" autoplay muted loop playsinline controls width="100%">
+        <source src="video/LargeHop1.mp4" type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered" style="margin-top:1rem;">
+        <b>LineRides</b> enables diverse stunt behaviors on the UMV bicycle robot
+        from user-provided spatial guidelines and sparse key-orientations.
+      </h2>
+    </div>
+  </div>
+</section>
+
+<!-- Abstract -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Designing reward functions for agile robotic maneuvers in reinforcement learning remains difficult,
+            and demonstration-based approaches often require reference motions that are unavailable for novel
+            platforms or extreme stunts.
+          </p>
+          <p>
+            We present <b>LineRides</b>, a line-guided learning framework that enables a custom bicycle robot
+            to acquire diverse, commandable stunt behaviors from a user-provided spatial guideline and sparse
+            key-orientations, without demonstrations or explicit timing.
+          </p>
+          <p>
+            LineRides handles physically infeasible guidelines using a <b>tracking margin</b> that permits
+            controlled deviation, resolves temporal ambiguity by measuring progress via <b>traveled distance</b>
+            along the guideline, and disambiguates motion details through position- and sequence-based
+            <b>key-orientations</b>.
+          </p>
+          <p>
+            We evaluate LineRides on the <b>Ultra Mobility Vehicle (UMV)</b> and show that the policy trained
+            with our methods supports seamless transitions between normal driving and stunt execution, enabling
+            five distinct stunts on command: <b>MiniHop</b>, <b>LargeHop</b>, <b>ThreePointTurn</b>,
+            <b>Backflip</b>, and <b>DriftTurn</b>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Stunt Skills -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Learned Stunt Skills</h2>
+
+        <!-- MiniHop -->
+        <div style="margin-top: 2rem;">
+          <h3 class="title is-4 skill-title">MiniHop</h3>
+          <p class="has-text-justified">
+            A small vertical hop reaching approximately 32 cm in height and 50 cm in distance.
+            Demonstrated on real hardware.
+          </p>
+          <div class="video-grid">
+            <video class="demo-video" autoplay muted loop playsinline controls>
+              <source src="video/MiniHop1.mp4" type="video/mp4">
+            </video>
+            <video class="demo-video" autoplay muted loop playsinline controls>
+              <source src="video/MiniHop2.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+
+        <!-- LargeHop -->
+        <div style="margin-top: 2.5rem;">
+          <h3 class="title is-4 skill-title">LargeHop</h3>
+          <p class="has-text-justified">
+            A larger vertical hop reaching about 56 cm in height and 80 cm in distance.
+            Demonstrated on real hardware.
+          </p>
+          <div class="video-grid">
+            <video class="demo-video" autoplay muted loop playsinline controls>
+              <source src="video/LargeHop1.mp4" type="video/mp4">
+            </video>
+            <video class="demo-video" autoplay muted loop playsinline controls>
+              <source src="video/LargeHop2.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+
+        <!-- ThreePointTurn -->
+        <div style="margin-top: 2.5rem;">
+          <h3 class="title is-4 skill-title">ThreePointTurn</h3>
+          <p class="has-text-justified">
+            A planar two-step pivot turn that requires precise balance adjustments.
+            Demonstrated on real hardware.
+          </p>
+          <div class="video-grid single">
+            <video class="demo-video" autoplay muted loop playsinline controls>
+              <source src="video/ThreePointsTurn.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+
+        <!-- DriftTurn -->
+        <div style="margin-top: 2.5rem;">
+          <h3 class="title is-4 skill-title">DriftTurn <span class="tag is-info is-light">Simulation</span></h3>
+          <p class="has-text-justified">
+            A planar left drift-turn maneuver of roughly 90 degrees involving controlled rear-wheel slip.
+          </p>
+          <div class="video-grid single">
+            <video class="demo-video" autoplay muted loop playsinline controls>
+              <source src="video/DriftTurn.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+
+        <!-- Backflip -->
+        <div style="margin-top: 2.5rem;">
+          <h3 class="title is-4 skill-title">Backflip <span class="tag is-info is-light">Simulation</span></h3>
+          <p class="has-text-justified">
+            A full vertical backward flip executed while moving forward. The guideline is generated
+            via trajectory optimization with a simplified two-mass model.
+          </p>
+          <div class="video-grid single">
+            <video class="demo-video" autoplay muted loop playsinline controls>
+              <source src="video/Backflip.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Method -->
+<section class="section" style="background-color: #fafafa;">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Method Overview</h2>
+        <div class="content has-text-justified">
+          <p>
+            LineRides enables robots to learn stunt behaviors from a simple user-provided <i>line</i>
+            (spatial guideline) and a sequence of <i>key-orientations</i>. The framework addresses
+            three key challenges:
+          </p>
+          <ul>
+            <li><b>Margin Parameter:</b> Allows controlled deviation from potentially infeasible guidelines,
+            providing the policy with flexibility to satisfy physical constraints.</li>
+            <li><b>Distance-based Progress:</b> Uses the robot's cumulative traveled distance as a progression
+            measure along the guideline, enabling consistent target selection without explicit timing.</li>
+            <li><b>Key-orientations:</b> Specifies desired base orientations at selected waypoints for
+            fine-grained motion control, supporting both position-based and sequence-based formulations.</li>
+          </ul>
+          <p>
+            The framework trains a single end-to-end policy that supports both <i>driving mode</i> and
+            <i>stunt mode</i>, enabling seamless transitions between normal operation and stunt execution.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BibTeX -->
+<section class="section" id="bibtex">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">BibTeX</h2>
+        <div class="bibtex-block">
+          <button class="copy-btn" onclick="copyBibtex()" title="Copy to clipboard">
+            <i class="fas fa-copy"></i>
+          </button>
+          <pre id="bibtex-text">@article{rho2025linerides,
+  title     = {LineRides: Line-Guided Reinforcement Learning for Bicycle Robot Stunts},
+  author    = {Rho, Seungeun and Fahmi, Shamel and Kim, Jeonghwan and Ilvonen, Arianna and Ha, Sehoon and Nelson, Gabriel},
+  journal   = {Under Review},
+  year      = {2025}
+}</pre>
+        </div>
+        <p id="copy-msg" style="display:none; margin-top:0.5rem; color:#48c774;">Copied!</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+function copyBibtex() {
+  const text = document.getElementById('bibtex-text').innerText;
+  navigator.clipboard.writeText(text).then(function() {
+    const msg = document.getElementById('copy-msg');
+    msg.style.display = 'block';
+    setTimeout(function() { msg.style.display = 'none'; }, 2000);
+  });
+}
+</script>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <p class="is-size-6" style="color:#aaa;">
+        This work was done while S.&nbsp;Rho and J.&nbsp;Kim were at the RAI Institute.
+      </p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
