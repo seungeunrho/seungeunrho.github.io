@@ -199,16 +199,12 @@
 </section>
 
 <!-- Teaser Video -->
-<section class="hero teaser">
+<section class="section">
   <div class="container is-max-desktop">
-    <div class="hero-body">
-      <video class="demo-video" autoplay muted loop playsinline controls width="100%">
-        <source src="video/LargeHop1.mp4" type="video/mp4">
+    <div style="display: flex; justify-content: center; width: 100%;">
+      <video class="demo-video" autoplay muted loop playsinline controls style="width: 80%; height: auto;">
+        <source src="video/Overview.mp4" type="video/mp4">
       </video>
-      <h2 class="subtitle has-text-centered" style="margin-top:1rem;">
-        <b>LineRides</b> enables diverse stunt behaviors on the UMV bicycle robot
-        from user-provided spatial guidelines and sparse key-orientations.
-      </h2>
     </div>
   </div>
 </section>
@@ -219,6 +215,7 @@
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Abstract</h2>
+        
         <div class="content has-text-justified">
           <p>
             Designing reward functions for agile robotic maneuvers in reinforcement learning remains difficult,
@@ -243,6 +240,7 @@
             <b>Backflip</b>, and <b>DriftTurn</b>.
           </p>
         </div>
+        
       </div>
     </div>
   </div>
@@ -303,18 +301,7 @@
           </div>
         </div>
 
-        <!-- DriftTurn -->
-        <div style="margin-top: 2.5rem;">
-          <h3 class="title is-4 skill-title">DriftTurn <span class="tag is-info is-light">Simulation</span></h3>
-          <p class="has-text-justified">
-            A planar left drift-turn maneuver of roughly 90 degrees involving controlled rear-wheel slip.
-          </p>
-          <div class="video-grid single">
-            <video class="demo-video" autoplay muted loop playsinline controls>
-              <source src="video/DriftTurn.mp4" type="video/mp4">
-            </video>
-          </div>
-        </div>
+        
 
         <!-- Backflip -->
         <div style="margin-top: 2.5rem;">
@@ -326,6 +313,19 @@
           <div class="video-grid single">
             <video class="demo-video" autoplay muted loop playsinline controls>
               <source src="video/Backflip.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+
+        <!-- DriftTurn -->
+        <div style="margin-top: 2.5rem;">
+          <h3 class="title is-4 skill-title">DriftTurn <span class="tag is-info is-light">Simulation</span></h3>
+          <p class="has-text-justified">
+            A planar left drift-turn maneuver of roughly 90 degrees involving controlled rear-wheel slip.
+          </p>
+          <div class="video-grid single">
+            <video class="demo-video" autoplay muted loop playsinline controls>
+              <source src="video/DriftTurn.mp4" type="video/mp4">
             </video>
           </div>
         </div>
